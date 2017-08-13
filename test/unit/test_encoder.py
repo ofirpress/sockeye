@@ -26,7 +26,7 @@ _DATA_LENGTH_ND = mx.nd.array([1, 2, 3, 4, 5, 6, 7, 8])
 
 @pytest.mark.parametrize("config, out_data_shape, out_data_length, out_seq_len", [
     (sockeye.encoder.ConvolutionalEmbeddingConfig(num_embed=_NUM_EMBED,
-                                                  output_dim=None,
+                                                  output_dim=0,
                                                   max_filter_width=3,
                                                   num_filters=[8, 16, 16],
                                                   pool_stride=4,

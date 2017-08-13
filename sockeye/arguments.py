@@ -196,10 +196,10 @@ def add_model_parameters(params):
                                    'Default: %(default)s.')
 
     model_params.add_argument('--conv-embed-output-dim',
-                              type=int_greater_or_equal(1),
-                              default=None,
-                              help="Project segment embeddings to this size for ConvolutionalEmbeddingEncoder. Omit to"
-                                   " avoid projection, leaving segment embeddings total size of all filters. Default:"
+                              type=int_greater_or_equal(0),
+                              default=512,
+                              help="Project segment embeddings from ConvolutionalEmbeddingEncoder to this size. Set to"
+                                   " zero for no projection, leaving embeddings total size of all filters. Default:"
                                    " %(default)s.")
     model_params.add_argument('--conv-embed-max-filter-width',
                               type=int_greater_or_equal(1),

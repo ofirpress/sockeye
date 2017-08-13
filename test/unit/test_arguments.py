@@ -82,7 +82,7 @@ def test_device_args(test_params, expected_params):
               attention_use_prev_word=False, rnn_context_gating=False, layer_normalization=False,
               encoder=C.RNN_NAME, conv_embed_max_filter_width=8,
               decoder=C.RNN_NAME,
-              conv_embed_output_dim=None, conv_embed_num_filters=(200, 200, 250, 250, 300, 300, 300, 300),
+              conv_embed_output_dim=512, conv_embed_num_filters=(200, 200, 250, 250, 300, 300, 300, 300),
               conv_embed_num_highway_layers=4, conv_embed_pool_stride=5, conv_embed_add_positional_encodings=False)),
     ('--params test_params --num-words 10 --num-words-source 11 --num-words-target 12 --word-min-count 10 '
      '--encoder-num-layers 10 --rnn-cell-type gru '
